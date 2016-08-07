@@ -3,15 +3,14 @@ function HTMLActuator() {
   this.scoreContainer   = document.querySelector(".score-container");
   this.bestContainer    = document.querySelector(".best-container");
   this.messageContainer = document.querySelector(".game-message");
-  this.info             = document.querySelector(".info");  
+  this.info             = document.querySelector(".info");
   this.dogeSays = document.querySelector(".doge-says");
   this.adSpace = document.querySelector(".shout-out");
 
   this.score = 0;
 }
 
-var dogeSayings = ['such good', 'so amaze', 'many points', 'very unstoppable', 'great jorb', 'such playing', 'very good', 'points', 'very gaming', 'such player', 'concern' ,'bewildered',
-'many game', 'so good', 'very scores', 'so scoring', 'so hot right now', 'such playing', 'such matching', 'so matched', 'very matched', 'very neat' ,'such natural',]
+var dogeSayings = ['such devopz', 'many openstacks', 'very devops', 'such dns', 'może policja?', 'najgorzej', 'much pruszcz', 'very clouds', 'such infinibands', 'so devops', 'so prushch'];
 
 var ads = [
 
@@ -129,7 +128,7 @@ HTMLActuator.prototype.updateScore = function (score) {
     addition.classList.add("score-addition");
     addition.textContent = "+" + difference;
     this.scoreContainer.appendChild(addition);
-    
+
     var message = dogeSayings[Math.floor(Math.random() * dogeSayings.length)]
     var messageElement = document.createElement("p");
     messageElement.textContent = message
@@ -142,7 +141,7 @@ HTMLActuator.prototype.updateScore = function (score) {
     if (difference > 4) {
      this.adSpace.innerHTML = ads[Math.floor(Math.random() * ads.length)]
     }
-    
+
   }
 };
 
@@ -170,7 +169,7 @@ HTMLActuator.prototype.showInfo = function () {
     this.info.setAttribute('style','display:none;')
     document.querySelector('.show-info').innerHTML = 'INFO';
   } else {
-    this.info.setAttribute('style','display:block;') 
+    this.info.setAttribute('style','display:block;')
     document.querySelector('.show-info').innerHTML = 'CLOSE';
   }
 }
